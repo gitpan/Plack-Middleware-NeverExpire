@@ -11,7 +11,12 @@ use ExtUtils::MakeMaker 6.31;
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'set expiration headers far in the future',
   'AUTHOR' => 'Aristotle Pagaltzis <pagaltzis@gmx.de>',
-  'BUILD_REQUIRES' => {},
+  'BUILD_REQUIRES' => {
+    'HTTP::Request::Common' => '0',
+    'Plack::Builder' => '0',
+    'Plack::Test' => '0',
+    'Test::More' => '0'
+  },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
   },
@@ -19,8 +24,14 @@ my %WriteMakefileArgs = (
   'EXE_FILES' => [],
   'LICENSE' => 'perl',
   'NAME' => 'Plack::Middleware::NeverExpire',
-  'PREREQ_PM' => {},
-  'VERSION' => '1.0',
+  'PREREQ_PM' => {
+    'Plack::Middleware' => '0',
+    'Plack::Util' => '0',
+    'Time::Piece' => '0',
+    'Time::Seconds' => '0',
+    'parent' => '0'
+  },
+  'VERSION' => '1.001',
   'test' => {
     'TESTS' => 't/*.t'
   }

@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Plack-Middleware-NeverExpire,
-version 1.0:
+version 1.001:
 
   set expiration headers far in the future
 
