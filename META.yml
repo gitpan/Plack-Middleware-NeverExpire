@@ -26,4 +26,4 @@ resources:
   bugtracker: http://github.com/ap/Plack-Middleware-NeverExpire/issues
   homepage: http://github.com/ap/Plack-Middleware-NeverExpire
   repository: git://github.com/ap/Plack-Middleware-NeverExpire
-version: 1.001
+version: 1.002

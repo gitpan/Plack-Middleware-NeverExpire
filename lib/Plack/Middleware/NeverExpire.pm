@@ -1,6 +1,6 @@
 package Plack::Middleware::NeverExpire;
 BEGIN {
-  $Plack::Middleware::NeverExpire::VERSION = '1.001';
+  $Plack::Middleware::NeverExpire::VERSION = '1.002';
 }
 use strict;
 use parent 'Plack::Middleware';
@@ -13,14 +13,14 @@ use Time::Seconds 'ONE_YEAR';
 
 sub call {
 	my $self = shift;
-	my ( $env ) = @_;
-	my $res = $self->app->( $env );
-	if ( $res->[0] == 200 ) {
+	Plack::Util::response_cb( $self->app->( shift ), sub {
+		my $res = shift;
+		return if $res->[0] != 200;
 		my $date = Time::Piece->gmtime( time + ONE_YEAR );
 		Plack::Util::header_set( $res->[1], 'Expires', $date->strftime );
 		Plack::Util::header_push( $res->[1], 'Cache-Control', 'max-age=' . ONE_YEAR );
-	}
-	return $res;
+		return;
+	} );
 }
 
 1;
@@ -35,7 +35,7 @@ Plack::Middleware::NeverExpire - set expiration headers far in the future
 
 =head1 VERSION
 
-version 1.001
+version 1.002
 
 =head1 SYNOPSIS
 
