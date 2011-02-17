@@ -1,0 +1,35 @@
+{
+   "abstract" : "set expiration headers far in the future",
+   "author" : [
+      "Aristotle Pagaltzis <pagaltzis@gmx.de>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.101670",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Plack-Middleware-NeverExpire",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/ap/Plack-Middleware-NeverExpire/issues"
+      },
+      "homepage" : "http://github.com/ap/Plack-Middleware-NeverExpire",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/ap/Plack-Middleware-NeverExpire"
+      }
+   },
+   "version" : "1.0"
+}

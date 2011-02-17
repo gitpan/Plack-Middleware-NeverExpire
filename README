@@ -1,0 +1,13 @@
+
+
+This archive contains the distribution Plack-Middleware-NeverExpire,
+version 1.0:
+
+  set expiration headers far in the future
+
+This software is copyright (c) 2011 by Aristotle Pagaltzis.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+
