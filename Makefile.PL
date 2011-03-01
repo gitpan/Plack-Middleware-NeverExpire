@@ -25,13 +25,14 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Plack::Middleware::NeverExpire',
   'PREREQ_PM' => {
+    'Plack' => '0.9942',
     'Plack::Middleware' => '0',
     'Plack::Util' => '0',
     'Time::Piece' => '0',
     'Time::Seconds' => '0',
     'parent' => '0'
   },
-  'VERSION' => '1.002',
+  'VERSION' => '1.003',
   'test' => {
     'TESTS' => 't/*.t'
   }

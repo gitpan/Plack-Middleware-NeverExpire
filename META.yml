@@ -17,6 +17,7 @@ meta-spec:
   version: 1.4
 name: Plack-Middleware-NeverExpire
 requires:
+  Plack: 0.9942
   Plack::Middleware: 0
   Plack::Util: 0
   Time::Piece: 0
@@ -26,4 +27,4 @@ resources:
   bugtracker: http://github.com/ap/Plack-Middleware-NeverExpire/issues
   homepage: http://github.com/ap/Plack-Middleware-NeverExpire
   repository: git://github.com/ap/Plack-Middleware-NeverExpire
-version: 1.002
+version: 1.003

@@ -1,6 +1,6 @@
 package Plack::Middleware::NeverExpire;
 BEGIN {
-  $Plack::Middleware::NeverExpire::VERSION = '1.002';
+  $Plack::Middleware::NeverExpire::VERSION = '1.003';
 }
 use strict;
 use parent 'Plack::Middleware';
@@ -35,7 +35,7 @@ Plack::Middleware::NeverExpire - set expiration headers far in the future
 
 =head1 VERSION
 
-version 1.002
+version 1.003
 
 =head1 SYNOPSIS
 
